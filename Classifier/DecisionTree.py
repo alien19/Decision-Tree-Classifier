@@ -343,6 +343,22 @@ def classify_example(example, root):
         residual_root = answer
         return classify_example(example, residual_root)
 
+def classify_review_text(review_text,root):
+    question=root.val
+    feature_name, _, value = question.split()
+    feature_name = feature_name.replace('count_','')
+    # ask question
+    if review_text.count(feature_name) <= int(value):
+          answer = root.left
+    else:
+          answer = root.right
+    # base case
+    if answer.left==answer.right==None:  
+        return answer.val
+    # recursive part
+    else:
+        residual_root = answer
+        return classify_review_text(review_text, residual_root)
 
 # In[79]:
 
