@@ -66,7 +66,7 @@ def words_count(dataFrame):
 # In[66]:
 
 
-def check_purity(data):
+def Is_pure(data):
 
     rating_column = data[:, -1]
     unique_classes = np.unique(rating_column)
@@ -80,7 +80,7 @@ def check_purity(data):
 # In[67]:
 
 
-def classify_data(data):
+def Data_classification(data):
 
     rating_column = data[:, -1]
     unique_classes, counts_unique_classes = np.unique(rating_column, return_counts=True)
@@ -94,7 +94,7 @@ def classify_data(data):
 # In[68]:
 
 
-def get_potential_splits(data):
+def get_splits(data):
 
     potential_splits = {}
     n_columns = data.shape[1]
@@ -111,7 +111,7 @@ def get_potential_splits(data):
 # In[69]:
 
 
-def split_data(data, split_column, split_value):
+def splitting(data, split_column, split_value):
 
     split_column_values = data[:, split_column]
 
@@ -158,7 +158,7 @@ def determine_best_split(data, potential_splits):
     overall_entropy = 9999
     for column_index in potential_splits:
         for value in potential_splits[column_index]:
-            data_below, data_above = split_data(data, split_column=column_index, split_value=value)
+            data_below, data_above = splitting(data, split_column=column_index, split_value=value)
             current_overall_entropy = calculate_overall_entropy(data_below, data_above)
 
             if current_overall_entropy <= overall_entropy:
@@ -285,8 +285,8 @@ def decision_tree_algorithm(df, counter=0, min_samples=2, max_depth=5):
 
 
     # base cases
-    if (check_purity(data)) or (len(data) < min_samples) or (counter == max_depth):
-        classification = classify_data(data)
+    if (Is_pure(data)) or (len(data) < min_samples) or (counter == max_depth):
+        classification = Data_classification(data)
         return Node(classification)
 
 
@@ -294,12 +294,12 @@ def decision_tree_algorithm(df, counter=0, min_samples=2, max_depth=5):
     else:
         counter += 1
         # helper functions
-        potential_splits = get_potential_splits(data)
+        potential_splits = get_splits(data)
         split_column, split_value = determine_best_split(data, potential_splits)
-        data_below, data_above = split_data(data, split_column, split_value)
+        data_below, data_above = splitting(data, split_column, split_value)
 
         if len(data_below)==0 or len(data_above)==0:
-            classification = classify_data(data)
+            classification = Data_classification(data)
             return Node(classification)
 
 

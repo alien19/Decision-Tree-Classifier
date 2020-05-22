@@ -181,7 +181,7 @@ class Start_Window(QMainWindow):
         dataFrame = data_init(path+"/Datasets/sample_train.csv")
         adjustedDataframe = words_count(dataFrame)
         depth = int(DStart.depthEdit.text())
-        DStart.tree = decision_tree_algorithm(adjustedDataframe,max_depth=depth)
+        DStart.tree = decision_tree(adjustedDataframe,max_depth=depth)
         
         d.clear()
         draw_graph(DStart.tree.root)
