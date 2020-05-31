@@ -8,12 +8,13 @@
 ## Team Members Roles:
 Member Name | Role |
 --- | --- | 
-Mariam Abdelrahman | Preparing datasets \n GUI |
---- | --- | 
-Manal Ahmed | |
---- | --- |
-Nada Emam | |
---- | --- | 
-Nermeen Osama | |
---- | --- | 
-Nesma Mohamed | |
+Mariam Abdelrahman | Dataset preparation
+||GUI |
+Manal Ahmed | Helper functions
+|| Building the Decision Tree
+Nada Emam | Datset preparation
+|| Report
+Nermeen Osama | Node and Tree Classes
+|| Graphical visualisation of the trained tree
+Nesma Mohamed | Helper functions
+||Report
