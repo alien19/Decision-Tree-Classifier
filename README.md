@@ -6,6 +6,6 @@
   * graphviz
   
 ## Team Members Roles:
-  Role | #1 |
---- | --- | --- |
-Seconds | 301 | 283 |
+Role | #1 |
+--- | --- | 
+Seconds | 301 | 
