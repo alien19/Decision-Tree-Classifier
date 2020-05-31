@@ -6,10 +6,9 @@
   * graphviz
   
 ## Team Members Roles:
-Role | #1 |
+Member Name | Role |
 --- | --- | 
-Mariam Abdelrahman | Preparing datasets 
-                          GUI |
+Mariam Abdelrahman | Preparing datasets \n GUI |
 --- | --- | 
 Manal Ahmed | |
 --- | --- |
