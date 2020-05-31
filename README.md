@@ -8,4 +8,13 @@
 ## Team Members Roles:
 Role | #1 |
 --- | --- | 
-Seconds | 301 | 
+Mariam Abdelrahman | Preparing datasets 
+                          GUI |
+--- | --- | 
+Manal Ahmed | |
+--- | --- |
+Nada Emam | |
+--- | --- | 
+Nermeen Osama | |
+--- | --- | 
+Nesma Mohamed | |
